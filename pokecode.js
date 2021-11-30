@@ -38,7 +38,7 @@ function populate(pokemon) {
     const pokeFront = document.createElement('figure')
     pokeFront.className= 'cardFace front'
     const pokeImg = document.createElement('img')
-    pokeImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/$(pokemonid).png`
+    pokeImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonid}.png`
     const pokeCaption = document.createElement('figcaption')
     pokeCaption.textContent = pokemon.name
     pokeFront.appendChild(pokeImg)
