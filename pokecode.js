@@ -1,5 +1,3 @@
-import { removeChildren } from '../utils/index.js'
-
 function getAPIData(url) {
     try {
       return fetch(url).then((data) => data.json())
@@ -10,8 +8,8 @@ function getAPIData(url) {
   
   function loadPokemon(offset = 0, limit = 25) {
      
-      getAPIData(`https://pokeapi.co/api/v2/pokemon/?limit=${limit}&offset=${offset}`), 
-      then(async (data) => {
+      getAPIData(`https://pokeapi.co/api/v2/pokemon/?limit=${limit}&offset=${offset}`,) 
+      .then(async (data) => {
     for (const pokemon of data.results) {
       await getAPIData(pokemon.url).then((pokeData => populatePokeCard(pokeData))
       )
@@ -25,7 +23,6 @@ function getAPIData(url) {
   const pokeGrid = document.querySelector('.pokeGrid')
   const loadButton = document.querySelector('.loadPokemon')
   loadButton.addEventListener('click', () => {
-  removeChildren(pokeGrid)
   loadPokemon()
   })
   const newButton = docment.querySelector('newPokemon')
