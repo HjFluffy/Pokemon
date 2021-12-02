@@ -49,3 +49,7 @@
 figure img {
     width: 200px;
 }
+
+label {
+    display: flex;
+}

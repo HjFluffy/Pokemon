@@ -4,7 +4,6 @@ function removeChildren(container){
   }
   }
 
-
 function getAPIData(url) {
     try {
       return fetch(url).then((data) => data.json())
