@@ -1,3 +1,10 @@
+function removeChildren(container){
+  while (container.firstChild){
+  container.removeChild(container.firstChild)
+  }
+  }
+
+
 function getAPIData(url) {
     try {
       return fetch(url).then((data) => data.json())
@@ -7,7 +14,7 @@ function getAPIData(url) {
   }
   
   function loadPokemon(offset = 0, limit = 25) {
-     
+     removeChildren(pokeGrid)
       getAPIData(`https://pokeapi.co/api/v2/pokemon/?limit=${limit}&offset=${offset}`,) 
       .then(async (data) => {
     for (const pokemon of data.results) {
@@ -23,7 +30,7 @@ function getAPIData(url) {
   const pokeGrid = document.querySelector('.pokeGrid')
   const loadButton = document.querySelector('.loadPokemon')
   loadButton.addEventListener('click', () => {
-  loadPokemon()
+  loadPokemon(0, 50)
   })
   const newButton = docment.querySelector('newPokemon')
   newButton.addEventListener('click', () => {
