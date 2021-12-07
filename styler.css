@@ -24,6 +24,7 @@
     transition: transform 1s;
     transform-style: preserve-3d;
     cursor: pointer;
+
 }
 
 .card.is-flipped {
@@ -52,4 +53,7 @@ figure img {
 
 label {
     display: flex;
+}
+figcaption {
+    text-align: center;
 }

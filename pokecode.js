@@ -29,9 +29,9 @@ function getAPIData(url) {
   const pokeGrid = document.querySelector('.pokeGrid')
   const loadButton = document.querySelector('.loadPokemon')
   loadButton.addEventListener('click', () => {
-  loadPokemon(0, 50)
+  loadPokemon(0, 25)
   })
-  const newButton = docment.querySelector('newPokemon')
+  const newPokemon = docment.querySelector('.newPokemon')
   newButton.addEventListener('click', () => {
       let pokeName = prompt('Name your new Pokemon!')
       let pokeHeight = prompt ('How tall is your Pokemon?')
@@ -117,5 +117,4 @@ morePokemon.addEventListener('click', () => {
       }
   }
 
- 
   
