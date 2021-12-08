@@ -31,8 +31,8 @@ function getAPIData(url) {
   loadButton.addEventListener('click', () => {
   loadPokemon(0, 25)
   })
-  const newPokemon = docment.querySelector('.newPokemon')
-  newButton.addEventListener('click', () => {
+  const newPokemon = document.querySelector('.newPokemon')
+  newPokemon.addEventListener('click', () => {
       let pokeName = prompt('Name your new Pokemon!')
       let pokeHeight = prompt ('How tall is your Pokemon?')
       let pokeAbilities = prompt('What are your Pokemon abilites? (use a comma seperated list.')
@@ -116,5 +116,3 @@ morePokemon.addEventListener('click', () => {
           this.abilities = abilities
       }
   }
-
-  
