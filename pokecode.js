@@ -85,7 +85,7 @@ morePokemon.addEventListener('click', () => {
     } else {
     pokeImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
     const pokeCaption = document.createElement('figcaption')
-    pokeCaption.textContent = `${pokemon.id} ${pokemon.name}`
+    pokeCaption.textContent = `${pokemon.id} ${pokemon.name} ${pokemon.type}`
     pokeFront.appendChild(pokeImg)
     pokeFront.appendChild(pokeCaption)
     return pokeFront
