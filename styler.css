@@ -2,7 +2,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+html{
+    background-color: #7d78a3;
+}
 
 .pokeGrid {
     display: flex;
@@ -124,14 +126,9 @@ header button {
 
 footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin: 6px;
 }
-
-footer button {
-background-color: whitesmoke;
-cursor: pointer;
-border: none;
-color: white;
-
+.easterEgg {
+    cursor: pointer;
 }

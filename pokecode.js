@@ -122,7 +122,7 @@ morePokemon.addEventListener('click', () => {
     return pokeBack
   }
 
-  class Pokemon {
+  class pokemon {
       constructor(name, height, weight, abilities) {
           this.id = 9001,
           this.name = name,
