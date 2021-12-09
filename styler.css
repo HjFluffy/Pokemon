@@ -39,13 +39,40 @@
 }
 
 .front {
-    background: #2a75bb
+    background: #2a75bb;
+    border-radius: 16px;
+    border: 2px solid #ffff;
+    justify-content: center;
 }
 
 .back {
     background: #ffcb05;
     transform: rotateY(180deg);
+    border-radius: 16px;
+    border: 2px solid #ffff;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
 }
+
+.back h4 {
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+}
+
+.abilityList {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.list {
+    padding: 0;
+    margin: 0;
+    margin-bottom: .5rem;
+}
+
+
 
 figure img {
     width: 200px;

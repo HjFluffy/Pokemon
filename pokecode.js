@@ -85,7 +85,7 @@ morePokemon.addEventListener('click', () => {
     } else {
     pokeImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
     const pokeCaption = document.createElement('figcaption')
-    pokeCaption.textContent = `${pokemon.id} ${pokemon.name} ${pokemon.type}`
+    pokeCaption.textContent = `${pokemon.name} `
     pokeFront.appendChild(pokeImg)
     pokeFront.appendChild(pokeCaption)
     return pokeFront
@@ -97,13 +97,28 @@ morePokemon.addEventListener('click', () => {
     const label = document.createElement('h4')
     label.textContent = 'Abilities:'
     const abilityList = document.createElement('ul')
+    abilityList.className = `list`
     pokemon.abilities.forEach((ability) => {
       let abilityItem = document.createElement('li')
       abilityItem.textContent = ability.ability.name
+      abilityItem.className = `abilityList`
       abilityList.appendChild(abilityItem)
     })
+    const pokeHP = document.createElement('h4')
+    pokeHP.textContent = `Hit Points: ${pokemon.stats[0].base_stat}`
+    console.log(pokemon.id)
+
+    let pokeID = document.createElement('h4')
+    pokeID.textContent = `Number: ${pokemon.id}`
+  
+
+
+
+
     pokeBack.appendChild(label)
     pokeBack.appendChild(abilityList)
+    pokeBack.appendChild(pokeHP)
+    pokeBack.appendChild(pokeID)
     return pokeBack
   }
 
